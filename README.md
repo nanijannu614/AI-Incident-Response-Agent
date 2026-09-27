@@ -10,7 +10,7 @@ Traditional incident-response tools can provide alerts and documentation, but th
 
 This project explores an AI agent that can remember previous incidents, identify genuinely relevant past experiences, recommend proven actions, and learn from newly resolved incidents.
 
-💡 Solution
+**💡 Solution**
 
 The AI Incident Response Agent uses Hindsight as its long-term memory layer.
 
