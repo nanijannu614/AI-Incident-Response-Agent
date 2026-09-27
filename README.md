@@ -2,7 +2,7 @@ AI Incident Response Agent
 
 An AI-powered incident response agent that remembers previous production incidents, reasons over past experience, and learns from newly confirmed incident outcomes using Hindsight memory.
 
-🚨 Problem
+**🚨 Problem **
 
 Production incidents often repeat across software systems. Engineers may spend valuable time investigating incidents that are similar to issues that have already occurred.
 
