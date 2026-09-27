@@ -1,8 +1,8 @@
-AI Incident Response Agent
+**AI Incident Response Agent**
 
 An AI-powered incident response agent that remembers previous production incidents, reasons over past experience, and learns from newly confirmed incident outcomes using Hindsight memory.
 
-**🚨 Problem **
+**🚨 Problem**
 
 Production incidents often repeat across software systems. Engineers may spend valuable time investigating incidents that are similar to issues that have already occurred.
 
@@ -16,13 +16,14 @@ The AI Incident Response Agent uses Hindsight as its long-term memory layer.
 
 The agent follows a continuous memory loop:
 
-Recall — Retrieve relevant previous incident experiences.
-Reason — Analyze the current incident using available experience.
-Recommend — Suggest an appropriate root cause and action.
-Verify — Distinguish relevant experiences from unrelated incidents.
-Learn — Store the confirmed incident outcome in Hindsight.
-Improve — Use the newly stored experience when similar incidents occur again.
-🧠 Why Hindsight?
+1.Recall — Retrieve relevant previous incident experiences.
+2.Reason — Analyze the current incident using available experience.
+3.Recommend — Suggest an appropriate root cause and action.
+4.Verify — Distinguish relevant experiences from unrelated incidents.
+5.Learn — Store the confirmed incident outcome in Hindsight.
+6.Improve — Use the newly stored experience when similar incidents occur again.
+
+**🧠 Why Hindsight?**
 
 Hindsight provides the long-term memory layer that allows the agent to retain incident experiences and retrieve them when analyzing future incidents.
 
@@ -30,7 +31,7 @@ Memory is central to the system rather than being an optional feature.
 
 The agent is designed to avoid blindly copying solutions from unrelated incidents. It considers the service, dependency, failure pattern, and root cause before using previous experience as evidence.
 
-🏗️ Architecture
+**🏗️ Architecture**
 Streamlit UI
      |
      v
@@ -60,7 +61,9 @@ Incident Response Agent
              |
              v
    Future Incident Analysis
-🔄 Example
+   
+**🔄 Example**
+
 First Incident
 
 A database service experiences connection timeouts because the connection pool is exhausted.
@@ -83,7 +86,7 @@ The agent should not copy the database solution simply because both incidents co
 
 Instead, it can use the previously learned payment-service experience when the service and failure pattern genuinely match.
 
-✨ Key Features
+**✨ Key Features**
 Long-term incident memory using Hindsight
 Semantic recall of previous incidents
 AI-powered incident reasoning
@@ -93,7 +96,8 @@ Learning from confirmed incident outcomes
 Streamlit-based interactive interface
 Synthetic production incidents for demonstration
 Python implementation
-🛠️ Technology Stack
+
+**🛠️ Technology Stack**
 Python
 Streamlit
 Hindsight
@@ -102,7 +106,8 @@ python-dotenv
 Async AI reasoning
 Git
 GitHub
-📁 Project Structure
+
+**📁 Project Structure**
 AI-Incident-Response-Agent/
 ├── app.py
 ├── incident_agent.py
@@ -114,7 +119,7 @@ AI-Incident-Response-Agent/
 
 .env contains the Hindsight API key and is intentionally excluded from Git using .gitignore.
 
-⚙️ Setup
+**⚙️ Setup**
 1. Clone the repository
 git clone https://github.com/nanijannu614/AI-Incident-Response-Agent.git
 cd AI-Incident-Response-Agent
@@ -122,7 +127,7 @@ cd AI-Incident-Response-Agent
 python -m venv venv
 3. Activate the environment
 
-Windows:
+**Windows:**
 
 venv\Scripts\activate
 4. Install dependencies
@@ -137,23 +142,24 @@ Never commit the .env file or expose the API key publicly.
 
 6. Run the application
 streamlit run app.py
-🧪 Demonstrated Learning Loop
+
+**🧪 Demonstrated Learning Loop**
 
 The prototype demonstrates that the agent can:
 
-Remember a database connection-pool incident.
-Recall the experience for a later database incident.
-Remember a payment-service overload incident.
-Recall the payment experience for semantically similar payment incidents.
-Reject unrelated database or payment experiences when analyzing an identity-provider incident.
-Store a newly confirmed identity-provider incident.
-Recall that identity-provider experience when a later incident is described differently.
+-Remember a database connection-pool incident.
+-Recall the experience for a later database incident.
+-Remember a payment-service overload incident.
+-Recall the payment experience for semantically similar payment incidents.
+-Reject unrelated database or payment experiences when analyzing an identity-provider incident.
+-Store a newly confirmed identity-provider incident.
+-Recall that identity-provider experience when a later incident is described differently.
 
 The memory loop is:
 
 Remember → Reason → Act → Learn → Remember Again
 
-🧠 Hindsight Memory Flow
+**🧠 Hindsight Memory Flow**
 Current Incident
        ↓
 Hindsight Recall
@@ -169,7 +175,8 @@ Engineer Confirms Outcome
 Hindsight Retain
        ↓
 Future Incidents Benefit
-⚠️ Limitations
+
+**⚠️ Limitations**
 
 This project is a prototype and uses synthetic production incidents.
 
@@ -177,15 +184,16 @@ It is not intended to automatically execute production changes or replace human 
 
 Final diagnosis and operational actions should be validated by an engineer before being applied to a real production system.
 
-🔗 Hindsight Resources
+**🔗 Hindsight Resources**
 Hindsight GitHub: https://github.com/vectorize-io/hindsight
 Hindsight Documentation: https://hindsight.vectorize.io/
 Vectorize Agent Memory: https://vectorize.io/what-is-agent-memory
-👥 Team
+
+**👥 Team**
 
 AI Incident Response Agent team.
 
-📄 License
+**📄 License**
 
 This project is provided for demonstration and educational purposes.
 
